@@ -8,6 +8,7 @@
 }
 .container {
 	width: 1000px;
+	min-height: 255px;
     margin: auto;
     display: flex;
     flex-flow: row;
@@ -16,13 +17,51 @@
     background-color: #f5f5f5;
     border: 2px solid #dad8d8;
 }
-.title {
-	width: 800px;
-	/*margin: 20px 0 20px 0;*/
+.navbar {
+	width: 970px;
+	height: 60px;
 	padding: 20px 0 20px 0;
+	display: flex;
+	flex-flow: row;
+	justify-content: left;
+	cursor: pointer;
+}
+.active {
+	border-bottom: solid;
+}
+.nav-item {
+	width: auto;
+    padding: 5px;
+    margin: 0 10px 0 10px;
 }
 h1 {
 	text-align: center;
+}
+.table {
+	width: 900px;
+	min-height: 400px;
+    padding: 20px 0 20px 0;
+    display: none;
+}
+.table table {
+	text-align: center;
+    margin: auto;
+    background-color: #eaebec;
+    color: #666;
+    border: #ccc 1px solid;
+}
+.table table th {
+	padding: 15px 35px;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    background: #ededed;
+}
+.table table td {
+	padding: 15px 35px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    background-color: #fafafa;
 }
 .container .card-product {
 	position: relative;
@@ -32,12 +71,17 @@ h1 {
     background-color: #ffffff;
     border: 1px solid #dad8d8;
     cursor: pointer;
+	z-index: 0;
 }
 .container .card-product:hover {
 	opacity: 0.5;
 }
 .container .card-product:hover .choose-product { 
 	display: block;
+}
+.card-product .card-head img {
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 .card-product .card-body {
 	text-align: left;
@@ -54,5 +98,6 @@ h1 {
     transform: translate(-50%, -50%);
     color: #ffffff;
     font-size: 100px;
+	z-index: 1;
     display: none;
 }
